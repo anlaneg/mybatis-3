@@ -61,6 +61,7 @@ public class SqlSessionFactoryBuilder {
   }
 
   public SqlSessionFactory build(InputStream inputStream) {
+	  /*给定input string构造sqlSessionFactory*/
     return build(inputStream, null, null);
   }
 

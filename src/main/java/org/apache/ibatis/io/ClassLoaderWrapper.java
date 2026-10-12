@@ -109,6 +109,7 @@ public class ClassLoaderWrapper {
    * @return the resource or null
    */
   InputStream getResourceAsStream(String resource, ClassLoader[] classLoader) {
+	  /*遍历所有classloader,尝试加载给定的resource*/
     for (ClassLoader cl : classLoader) {
       if (null != cl) {
 
@@ -198,6 +199,7 @@ public class ClassLoaderWrapper {
   }
 
   ClassLoader[] getClassLoaders(ClassLoader classLoader) {
+	  /*初始化多个数组成员*/
     return new ClassLoader[]{
         classLoader,
         defaultClassLoader,
